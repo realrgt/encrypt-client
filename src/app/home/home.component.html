@@ -1,0 +1,22 @@
+<h1>Cypher</h1>
+
+<hr>
+<hr>
+Encryption <br><br>
+<input class="input" type="text" placeholder="data to encrypt" [(ngModel)]="request"><br><br>
+<input type="button" value="Encrypt" (click)="encryptUsingAES256()"><br><br>
+<span>
+  Encrypted Text:
+  <br>
+  <span>{{encrypted}}</span>
+</span>
+
+<hr>
+<hr>
+Decryption <br><br>
+<input class="input" type="text" placeholder="data to decrypt" [(ngModel)]="responce"><br><br>
+<input type="button" value="Decrypt" (click)="decryptUsingAES256()">&nbsp;
+
+<p>
+  Decrypted Text:<br> {{decrypted}}
+</p>

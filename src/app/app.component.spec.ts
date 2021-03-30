@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'encrypt-client'`, () => {
+  it(`should have as title 'handza-encrypt'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('encrypt-client');
+    expect(app.title).toEqual('handza-encrypt');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('encrypt-client app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('handza-encrypt app is running!');
   });
 });

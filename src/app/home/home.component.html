@@ -1,22 +1,25 @@
 <h1>Cypher</h1>
 
-<hr>
-<hr>
-Encryption <br><br>
-<input class="input" type="text" placeholder="data to encrypt" [(ngModel)]="request"><br><br>
-<input type="button" value="Encrypt" (click)="encryptUsingAES256()"><br><br>
+<hr />
+<hr />
+Encryption <br /><br />
+<textarea class="input" rows="7" cols="100" type="text" placeholder="data to encrypt" [(ngModel)]="request"></textarea>
+<br /><br />
+<input type="button" value="Encrypt" (click)="encryptUsingAES256()" /><br /><br />
 <span>
   Encrypted Text:
-  <br>
-  <span>{{encrypted}}</span>
+  <br />
+  <span class="output">{{ encrypted }}</span>
 </span>
 
-<hr>
-<hr>
-Decryption <br><br>
-<input class="input" type="text" placeholder="data to decrypt" [(ngModel)]="responce"><br><br>
-<input type="button" value="Decrypt" (click)="decryptUsingAES256()">&nbsp;
+<hr />
+<hr />
+Decryption <br /><br />
+<textarea class="input" type="text" rows="7" cols="100" placeholder="data to decrypt" [(ngModel)]="responce"></textarea>
+<br /><br />
+<input type="button" value="Decrypt" (click)="decryptUsingAES256()" />&nbsp;
 
 <p>
-  Decrypted Text:<br> {{decrypted}}
+  Decrypted Text:<br />
+  <span class="output">{{ decrypted }}</span>
 </p>

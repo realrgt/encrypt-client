@@ -6,11 +6,11 @@ Encryption <br /><br />
 <textarea class="input" rows="7" cols="100" type="text" placeholder="data to encrypt" [(ngModel)]="request"></textarea>
 <br /><br />
 <input type="button" value="Encrypt" (click)="encryptUsingAES256()" /><br /><br />
-<span>
+<p>
   Encrypted Text:
   <br />
-  <span class="output">{{ encrypted }}</span>
-</span>
+  <span id="encryptedText" class="output">{{ encrypted }}</span>
+</p>
 
 <hr />
 <hr />

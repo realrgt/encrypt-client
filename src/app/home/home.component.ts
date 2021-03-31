@@ -39,7 +39,11 @@ export class HomeComponent implements OnInit {
         padding: CryptoJS.pad.Pkcs7,
       });
 
-      this.encrypted = encrypted.toString();
+      this.encrypted = encrypted
+        .toString()
+        .replace(/\+/g, 'p1L2u3S')
+        .replace(/\//g, 's1L2a3S4h')
+        .replace(/=/g, 'e1Q2u3A4l');
     }
   }
 
@@ -47,7 +51,12 @@ export class HomeComponent implements OnInit {
     const key = CryptoJS.enc.Utf8.parse(this.token);
     const iv = CryptoJS.enc.Utf8.parse(this.token);
 
-    this.decrypted = CryptoJS.AES.decrypt(this.encrypted, key, {
+    const regularEncrypted = this.encrypted
+      .replace(/p1L2u3S/g, '+')
+      .replace(/s1L2a3S4h/g, '/')
+      .replace(/e1Q2u3A4l/g, '=');
+
+    this.decrypted = CryptoJS.AES.decrypt(regularEncrypted, key, {
       keySize: 5,
       iv,
       mode: CryptoJS.mode.ECB,

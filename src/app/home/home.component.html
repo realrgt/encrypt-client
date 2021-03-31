@@ -9,7 +9,8 @@ Encryption <br /><br />
 <p>
   Encrypted Text:
   <br />
-  <span id="encryptedText" class="output">{{ encrypted }}</span>
+  <span class="output">{{ encrypted }}</span>
+  <button class="btn-copy" *ngIf="encrypted != ''" (click)="copyText(encrypted)">Copy</button>
 </p>
 
 <hr />
